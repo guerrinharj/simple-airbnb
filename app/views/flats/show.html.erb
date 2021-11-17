@@ -11,4 +11,16 @@
        <%= @flat.price_per_night %>
       </h4>
     </div>
+
+  <div>
+  <%= link_to "EDIT", edit_flat_path(@flat[:id]) %>
+  <%= link_to "DELETE",
+            flat_path(@flat[:id]),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
   </div>
+
+  </div>
+
+
+<%= link_to "Back to home", flats_path %>
